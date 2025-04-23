@@ -1,0 +1,27 @@
+{
+  "name": "@wedoitz/ai-chatbot",
+  "version": "1.0.0",
+  "description": "chatbot serve",
+  "main": "chatbot.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "release-package": "npm run build && npx changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wedoitz/ai-chatbot.git"
+  },
+  "keywords": [],
+  "author": "@wedoitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wedoitz/ai-chatbot/issues"
+  },
+  "homepage": "https://github.com/wedoitz/ai-chatbot#readme",
+  "devDependencies": {
+    "@changesets/cli": "2.29.2",
+    "rollup": "^4.17.2",
+    "rollup-plugin-delete": "^2.0.0"
+  }
+}
