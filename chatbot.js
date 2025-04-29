@@ -52,7 +52,7 @@ chat.setAttribute("id", "ai-chatbot-screen"),
   (chat.style.zIndex = 999999999),
   (chat.style.overflow = "hidden"),
   document?.body?.appendChild(chat),
-  (chat.innerHTML = `<iframe\nsrc="https://barely-diverse-sparrow.ngrok-free.app/chat/${scriptTag.id}"\nwidth="100%"\nheight="100%"\nframeborder="0"\n></iframe>`);
+  (chat.innerHTML = `<iframe\nsrc="http://localhost:3000/chat/${scriptTag.id}"\nwidth="100%"\nheight="100%"\nframeborder="0"\n></iframe>`);
 const mediaQuery = window.matchMedia("(min-width: 550px)");
 
 function handleChatWindowSizeChange(t) {
