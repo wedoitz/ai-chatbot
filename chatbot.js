@@ -52,7 +52,7 @@ chat.setAttribute("id", "ai-chatbot-screen"),
   (chat.style.zIndex = 999999999),
   (chat.style.overflow = "hidden"),
   document?.body?.appendChild(chat),
-  (chat.innerHTML = `<iframe\nsrc="http://localhost:3000/chat/${scriptTag.id}"\nwidth="100%"\nheight="100%"\nframeborder="0"\n></iframe>`);
+  (chat.innerHTML = `<iframe\nsrc="https://barely-diverse-sparrow.ngrok-free.app/chat/${scriptTag.id}"\nwidth="100%"\nheight="100%"\nframeborder="0"\n></iframe>`);
 const mediaQuery = window.matchMedia("(min-width: 550px)");
 
 function handleChatWindowSizeChange(t) {
@@ -63,7 +63,7 @@ mediaQuery.addEventListener("change", handleChatWindowSizeChange),
 const getChatButtonColor = async () => {
   e = { color: "#14b8a6" };
   const t = await fetch(
-    `https://0915-2401-4900-1f2b-89c8-3c08-d9d8-66fa-d31d.ngrok-free.app/v1/project/get-brand-info`,
+    `https://barely-diverse-sparrow.ngrok-free.app/v1/project/get-brand-info`,
     {
       method: "POST",
       body: JSON.stringify({ id: scriptTag.id }),

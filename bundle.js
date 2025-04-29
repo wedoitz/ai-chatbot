@@ -65,7 +65,7 @@ mediaQuery.addEventListener("change", handleChatWindowSizeChange),
 const getChatButtonColor = async () => {
   e = { color: "#14b8a6" };
   const t = await fetch(
-    `https://0915-2401-4900-1f2b-89c8-3c08-d9d8-66fa-d31d.ngrok-free.app/v1/project/get-brand-info`,
+    `https://barely-diverse-sparrow.ngrok-free.app/v1/project/get-brand-info`,
     {
       method: "POST",
       body: JSON.stringify({ id: scriptTag.id }),
