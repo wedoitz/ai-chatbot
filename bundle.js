@@ -6,12 +6,12 @@ let BOT_IMAGE = null;
 const chatButton = document.createElement("div");
 chatButton.setAttribute("id", "ai-chatbot"),
   (chatButton.style.position = "fixed"),
-  (chatButton.style.bottom = "20px"),
+  (chatButton.style.bottom = "15px"),
   (chatButton.style.right = "20px"),
-  (chatButton.style.width = "50px"),
-  (chatButton.style.height = "50px"),
+  (chatButton.style.width = "60px"),
+  (chatButton.style.height = "60px"),
   (chatButton.style.borderColor = "#000"),
-  (chatButton.style.borderRadius = "25px"),
+  (chatButton.style.borderRadius = "50px"),
   (chatButton.style.backgroundColor = "black"),
   (chatButton.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2)"),
   (chatButton.style.cursor = "pointer"),
@@ -54,7 +54,7 @@ chat.setAttribute("id", "ai-chatbot-screen"),
   (chat.style.zIndex = 999999999),
   (chat.style.overflow = "hidden"),
   document?.body?.appendChild(chat),
-  (chat.innerHTML = `<iframe\nsrc="http://localhost:3000/chat/${scriptTag.id}"\nwidth="100%"\nheight="100%"\nframeborder="0"\n></iframe>`);
+  (chat.innerHTML = `<iframe\nsrc="https://ibot.rumango.com/chat/${scriptTag.id}"\nwidth="100%"\nheight="100%"\nframeborder="0"\n></iframe>`);
 const mediaQuery = window.matchMedia("(min-width: 550px)");
 
 function handleChatWindowSizeChange(t) {
@@ -65,7 +65,7 @@ mediaQuery.addEventListener("change", handleChatWindowSizeChange),
 const getChatButtonColor = async () => {
   e = { color: "#14b8a6" };
   const t = await fetch(
-    `https://barely-diverse-sparrow.ngrok-free.app/v1/project/get-brand-info`,
+    `https://apibot.rumango.com/v1/project/get-brand-info`,
     {
       method: "POST",
       body: JSON.stringify({ id: scriptTag.id }),
